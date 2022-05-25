@@ -11,7 +11,6 @@ puts 'Destroying data'
 Restaurant.destroy_all
 puts 'Starting seeds'
 10.times do
-  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.city, category: Restaurant::CATEGORY.sample)
+  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.city, phone_number: Faker::PhoneNumber.phone_number, category: Restaurant::CATEGORY.sample)
 end
 puts "#{Restaurant.count} created"
-puts restaurants

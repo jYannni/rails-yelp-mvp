@@ -1,7 +1,16 @@
-<%=  form_for @restaurant do |f| %>
-  <%= f.text_field :name, placeholder: "name" %>,<br>
-  <%= f.text_field :address, placeholder: "address"%> <br>
-  <%= f.text_field :phone_number, placeholder: "phone number" %> <br>
-  <%= f.select :category, collection: Restaurant::CATEGORY %> <br>
-  <%= f.submit %>
+<%#=  form_for @restaurant do |f| %>
+  <%#= f.text_field :name, placeholder: "name" %>,
+  <%#= f.text_field :address, placeholder: "address"%>
+  <%#= f.text_field :phone_number, placeholder: "phone number" %>
+  <%#= f.select :category, collection: Restaurant::CATEGORY %>
+  <%#= f.submit %>
+<%# end %>
+
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, placeholder: "name" %> <br>
+  <%= f.input :address, placeholder: "address"%> <br>
+  <%= f.input :phone_number, placeholder: "phone number" %> <br>
+  <%= f.input :category, collection: Restaurant::CATEGORY %>
+  <%= f.button :submit %>
 <% end %>
