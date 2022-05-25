@@ -1,0 +1,7 @@
+<%=  form_for @restaurant do |f| %>
+  <%= f.text_field :name, placeholder: "name" %>,<br>
+  <%= f.text_field :address, placeholder: "address"%> <br>
+  <%= f.text_field :phone_number, placeholder: "phone number" %> <br>
+  <%= f.select :category, collection: Restaurant::CATEGORY %> <br>
+  <%= f.submit %>
+<% end %>
